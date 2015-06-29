@@ -678,7 +678,7 @@ void IPVideoGrabber::threadedFunction()
                 }
                 
                 // check for buffer overflow
-                if(c >= BUF_LEN)
+                if(c >= BUF_LEN - 1)
                 {
                     resetBuffer = true;
                     ofLogError("IPVideoGrabber") << "[" + getCameraName() +"]: buffer overflow, resetting stream.";
