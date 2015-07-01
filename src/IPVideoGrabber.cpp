@@ -633,7 +633,7 @@ void IPVideoGrabber::threadedFunction()
                         {
                             buffer = ofBuffer(cBuf, c+1);
 
-                            if( c >= MIN_JPEG_SIZE)
+                            if( c >= MIN_JPEG_SIZE - 1)
                             { // some cameras send 2+ EOIs in a row, with no valid bytes in between
     
                                 ///////////////////////////////
